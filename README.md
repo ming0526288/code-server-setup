@@ -6,7 +6,7 @@
 
 需要有 `sudo` 权限的日常登录账号，以及 Git、Bash、curl、OpenSSL 和 systemd 工具。自动下载使用 Coder 的官方 Linux 发行包，适用于满足官方运行库要求的 x86_64 和 aarch64 服务器，包括常见的 Ubuntu、Debian 和 Fedora。服务器需能访问 GitHub 和 code-server.dev。已安装在 `/usr/bin`、`/usr/local/bin` 或当前账号 `~/.local/bin` 的 code-server 会直接复用。[官方安装与运行库要求](https://coder.com/docs/code-server/install#standalone-releases)
 
-这是私有仓库。新服务器须先用有权限的 GitHub 账号登录，例如使用 `gh auth login` 后执行 `gh auth setup-git`，再运行下面的命令。
+这是公开仓库，可直接通过 HTTPS 克隆，无需 GitHub 登录、令牌或 SSH 密钥。
 
 ```bash
 git clone https://github.com/ming0526288/code-server-setup.git
