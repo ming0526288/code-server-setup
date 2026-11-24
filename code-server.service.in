@@ -1,0 +1,15 @@
+[Unit]
+Description=code-server
+After=network.target
+
+[Service]
+Type=exec
+User=@USER@
+WorkingDirectory=~
+ExecStart=@BINARY@ --config .config/code-server/managed-systemd.yaml --auth password
+UnsetEnvironment=PASSWORD HASHED_PASSWORD PORT VSCODE_IPC_HOOK_CLI
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
